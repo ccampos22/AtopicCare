@@ -89,3 +89,11 @@
 .testimonial-header {
   margin-bottom: 40px;
 }
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    min-height: 440px;
+  }
+}
+
+

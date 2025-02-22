@@ -59,4 +59,8 @@
     .footer .social-links {
         text-align: center;
     }
+
+    .responsiveFooter{
+        margin-bottom: 40px;
+    }
 }

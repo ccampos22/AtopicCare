@@ -31,6 +31,20 @@
   .speaker {
     color: var(--primary-color);
   }
+
+  @media (max-width: 768px) {
+    .readBtn {
+      position: static; /* Quita el posicionamiento absoluto */
+      margin-top: 10px; /* Agrega espacio entre el h2 y el botón */
+      display: block;   /* Lo hace un elemento de bloque para centrarlo */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .speaker{
+      margin: 40px 0;
+    }
+  }
   
   /* ------------------ DARK MODE ------------------ */
   
