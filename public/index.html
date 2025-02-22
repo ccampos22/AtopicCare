@@ -378,38 +378,31 @@
           <div class="row justify-content-center">
               <div class="col-md-8 col-lg-6">
               <div class="signup-form-container">
-                  <form id="signupForm">
-                  <div class="form-floating" data-aos="fade-up" data-aos-delay="200">
-                      <input type="text" class="form-control" id="name" placeholder="Full Name" required>
-                      <label for="name"><i class="fas fa-user"></i> Full Name</label>
-                      <div class="invalid-feedback">
-                        Please enter your full name.
-                      </div>
-                  </div>
-                  <div class="form-floating" data-aos="fade-up" data-aos-delay="300">
-                      <input type="text" class="form-control" id="country" placeholder="Country" required>
-                      <label for="country"><i class="fas fa-globe"></i> Country</label>
-                      <div class="invalid-feedback">
-                        Please enter your country.
-                      </div>
-                  </div>
-                  <div class="form-floating" data-aos="fade-up" data-aos-delay="400">
-                      <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
-                      <label for="phone"><i class="fas fa-phone"></i> Phone</label>
-                      <div class="invalid-feedback">
-                        Please enter a valid phone number.
-                      </div>
-                  </div>
-                  <div class="form-floating" data-aos="fade-up" data-aos-delay="500">
-                      <input type="email" class="form-control" id="email" placeholder="E-mail address" required>
-                      <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
-                      <div class="invalid-feedback">
-                        Please enter a valid email address.
-                      </div>
-                  </div>
-                  <button type="submit" class="cta-btn w-100" data-aos="fade-up" data-aos-delay="600">
-                      Submit
-                  </button>
+                  <form id="signupForm" novalidate>
+                    <div class="form-floating" data-aos="fade-up" data-aos-delay="200">
+                        <input type="text" class="form-control" id="name" placeholder="Full Name" required>
+                        <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                        <div class="invalid-feedback" id="nameError"></div>
+                    </div>
+                    <div class="form-floating" data-aos="fade-up" data-aos-delay="300">
+                        <input type="text" class="form-control" id="country" placeholder="Country" required>
+                        <label for="country"><i class="fas fa-globe"></i> Country</label>
+                        <div class="invalid-feedback" id="countryError"></div>
+                    </div>
+                    <div class="form-floating" data-aos="fade-up" data-aos-delay="400">
+                        <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+                        <label for="phone"><i class="fas fa-phone"></i> Phone</label>
+                        <div class="invalid-feedback" id="phoneError"></div>
+                    </div>
+                    <div class="form-floating" data-aos="fade-up" data-aos-delay="500">
+                        <input type="email" class="form-control" id="email" placeholder="E-mail address" required>
+                        <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+                        <div class="invalid-feedback" id="emailError"></div>
+                    </div>
+                    <button type="submit" class="cta-btn w-100" data-aos="fade-up" data-aos-delay="600">
+                        Submit
+                    </button>
+                    <div class="valid-feedback" id="submitSuccess"></div>
                   </form>
               </div>
               </div>
@@ -479,6 +472,7 @@
     <script src="../assets/js/particles.js"></script>
     <script src="../assets/js/speech.js"></script>    
     <script src="../assets/js/settings.js"></script>  
+    <script src="../assets/js/signup.js"></script> 
   
   </body>
 </html>
