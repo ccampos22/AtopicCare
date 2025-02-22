@@ -1,0 +1,70 @@
+@import url('../css/global.css');
+
+/* Features */
+.features {
+  padding: 110px 0 0;
+  min-height: 400px;
+  background-color: var(--features-background);
+}
+
+.features h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.atopicCreamImg {
+  max-width: 250px;
+  margin: 0 auto;
+  display: block;
+  height: auto;
+}
+
+.features .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 42px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Icon styles */
+.feature .icon {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-right: 20px;
+}
+
+.feature .text {
+  flex: 1;
+}
+
+.features-right .feature {
+  flex-direction: row-reverse;
+}
+
+/* Efecto hover en ícono */
+.features .feature:hover .icon {
+  color: var(--cta-bg);
+  transform: scale(1.2) rotate(20deg) translateY(-5px);
+}
+
+/* Estilos de los encabezados y párrafos dentro de la feature */
+.features .text h2 {
+  font-size: 1.6rem;
+  margin: 10px 0;
+}
+
+.features .text p {
+  font-size: 1rem;
+  color: var(--paragraph);
+}

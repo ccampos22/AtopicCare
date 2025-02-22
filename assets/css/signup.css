@@ -1,0 +1,109 @@
+
+@import url('../css/global.css');
+
+/* SignUp */
+.signup {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f1f1f1, #e0e0e0);
+  text-align: center;
+}
+
+.signup::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: var(--line-separator);
+}
+
+.signup h2 {
+  font-size: 2.5rem;  
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.signup p {
+  font-size: 1.2rem;
+  color: var(--paragraph);
+  margin-bottom: 40px;
+}
+
+/* Form Container */
+.signup-form-container {
+  background: var(--text-white);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(30px);
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.3s;
+}
+
+.form-floating {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-floating input {
+  border-radius: 30px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  border: 2px solid var(--line-separator);
+  transition: all 0.3s ease;
+}
+
+.form-floating input:focus {
+  border-color: var(--cta-bg);
+  box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+.form-floating label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  font-size: 1rem;
+  color: var(--line-separator);
+  pointer-events: none;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+}
+
+.form-floating input:focus ~ label,
+.form-floating input:not(:placeholder-shown) ~ label {
+  top: -10px;
+  font-size: 0.85rem;
+  color: var(--cta-bg);
+}
+
+/* Estilos para el botón de envío */
+.cta-btn {
+  background-color: var(--cta-bg);
+  color: var(--text-white);
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: var(--cta-bg-hover);
+  transform: scale(1.05);
+}
+
+/* Keyframes initial animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

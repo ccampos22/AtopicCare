@@ -1,0 +1,91 @@
+@import url("../css/global.css");
+
+/* Testimonials */
+.testimonials {
+  background: linear-gradient(135deg, #f3f3f3, #ffffff);
+  padding: 100px 0;
+  position: relative;
+}
+
+.testimonials::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: var(--line-separator);
+}
+
+.testimonial-card {
+  background-color: var(--text-white);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-height: 370px;
+}
+
+.testimonial-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--primary-color);
+  opacity: 0.7;
+}
+
+/* Hover Effect on Card */
+.testimonial-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-footer {
+  margin-bottom: auto;
+  text-align: center;
+}
+
+.testimonial-footer span,
+.testimonial-footer small {
+  display: block;
+  color: #333;
+}
+
+/* Testimonial Img */
+.testimonial-img {
+  width: 100px;
+  height: 100px;
+  border: 4px solid var(--primary-color);
+  padding: 3px;
+  object-fit: cover;
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: var(--paragraph);
+  margin: 20px 0;
+}
+
+/* Rating Style */
+.rating i {
+  margin-right: 2px;
+  color: var(--testimonial-star);
+}
+
+#testimonials-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.testimonial-header {
+  margin-bottom: 40px;
+}
