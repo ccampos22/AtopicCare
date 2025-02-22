@@ -1,5 +1,10 @@
-function readSectionContent(sectionId, lang = 'en-US', rate = 1) {
+const readSectionContent = (sectionId, rate = 1) => {
     const section = document.getElementById(sectionId);
+    let lang;
+    if(Cookies.get('lang'))
+      lang = Cookies.get('lang') != "en" ? "es-CRC" : "en-US";
+    
+      
     if (section) {
       // Obtiene el texto interno de la sección
       const text = section.innerText;

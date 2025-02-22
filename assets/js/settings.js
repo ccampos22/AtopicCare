@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const langSelect = document.getElementById("lang-select");
+  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;  
 
   // Show / hide panel on click
   settingsButton.addEventListener("click", (e) => {
@@ -17,12 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     showSettingsBtn(200);
   });
-
-  // Change website language
-  langSelect.addEventListener("change", function () {
-    changeLanguage(this.value); 
-  });
-
+ 
   // Set Dark Mode depending on user preferences
   if(isDarkMode) document.body.classList.toggle("dark-mode", true);
   darkmodeToggle.addEventListener("change", function () {        
