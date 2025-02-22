@@ -184,6 +184,6 @@
     background: var(--darkModeCards) !important;
   }
 
-  body.dark-mode #settings-panel .option label{
+  body.dark-mode #settingsPanel .option label{
     color: var(--lightGray)
   }

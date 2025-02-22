@@ -1,33 +1,34 @@
-/* Botón flotante de Settings */
-#settings-button {
+@import url("../css/global.css");
+
+/* Settings */
+#settingsButton {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: linear-gradient(135deg, #22a385, #1d8f70);
-  color: #fff;
   width: 50px;
   height: 50px;
+  background: linear-gradient(135deg, #22a385, #1d8f70);
+  color: var(--text-white);
   border-radius: 50%;
-  display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  z-index: 9999;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  /* Oculto inicialmente */
+  z-index: 9999;
+  cursor: pointer;
+  display: flex;
   opacity: 0;
+  pointer-events: none;
   transform: translateY(20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Clase visible para el botón */
-#settings-button.visible {
+#settingsButton.visible {
   opacity: 1;
+  pointer-events: auto;
   transform: translateY(0);
 }
 
-/* Panel de Configuración (desplegable) */
-#settings-panel {
+#settingsPanel {
   position: fixed;
   bottom: 80px;
   right: 20px;
@@ -42,19 +43,17 @@
   transform: translateY(20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
-/* Clase visible para el panel */
-#settings-panel.visible {
+#settingsPanel.visible {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
 }
 
-/* Estilos para las opciones del panel */
-#settings-panel .option {
+
+#settingsPanel .option {
   margin-bottom: 20px;
 }
-#settings-panel .option label {
+#settingsPanel .option label {
   display: block;
   font-size: 14px;
   font-weight: 600;
@@ -62,7 +61,7 @@
   color: #333;
 }
 
-/* Estilos del toggle switch */
+/* Toggle switch */
 .switch {
   position: relative;
   display: inline-block;
