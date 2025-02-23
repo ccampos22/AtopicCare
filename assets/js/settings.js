@@ -18,7 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
  
   // Set Dark Mode depending on user preferences
-  if(isDarkMode) document.body.classList.toggle("dark-mode", true);
+  if(isDarkMode){
+    document.body.classList.toggle("dark-mode", true);
+    darkmodeToggle.checked = true;
+  }        
   darkmodeToggle.addEventListener("change", function () {        
     document.body.classList.toggle("dark-mode", this.checked);
   });
