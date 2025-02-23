@@ -2,17 +2,16 @@ const readSectionContent = (sectionId, rate = 1) => {
     const section = document.getElementById(sectionId);
     let lang;
     if(Cookies.get('lang'))
-      lang = Cookies.get('lang') != "en" ? "es-CRC" : "en-US";
+      lang = Cookies.get('lang') != "en" ? "es-MX" : "en-US";
     
       
     if (section) {
-      // Obtiene el texto interno de la sección
+      // Get the text to read
       const text = section.innerText;
-      // Crea una instancia para reproducir el texto
+      // Create an instance to read
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = lang;
-      utterance.rate = rate;
-      // Inicia la lectura
+      utterance.rate = rate;      
       speechSynthesis.speak(utterance);
     } else {
       console.error("No se encontró la sección con ID:", sectionId);
