@@ -33,8 +33,11 @@ AtopicCare is an interactive microsite designed to promote and sell a specialize
    git clone https://github.com/ccampos22/AtopicCare.git
    cd AtopicCare
    
-2. **Open the project**
-    Open the index.html file in your preferred browser or use a local server (e.g., Live Server for VS Code).
+2. **Open the project:**
+    Use a local server (e.g., Live Server for VS Code).
+
+## Notes    
+- **Important:** To use all the features, please run the project on a live server. (Cookies funcionality)
 
 ## Usage
 - **Navigation:** Users can explore the main sections: Home, Features, Gallery, Testimonials, Register, and Contact.
